@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background-color: #19384A; /* Màu xanh đậm làm nền chính, tạo sự tối giản và chuyên nghiệp */
+}
+
+.title {
+    text-align: center;
+    padding: 2.2em 0 0.5em 0;
+    color: #50ADBF; /* Màu xanh ngọc nhạt cho tiêu đề, nhẹ nhàng và nổi bật */
+}
+
+.alert {
+    background-color: #fff; /* Màu trắng cho banner thông báo, giữ sự sạch sẽ */
+    color: #E76186; /* Màu hồng đậm cho chữ, tạo điểm nhấn nổi bật */
+}
+
+.alert .info {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 16px;
+}
+
+.alert .info a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #E76186;
+}
+
+.alert .info a i {
+    padding: 0 8px;
+    color: #E76186;
+}
+
+.alert .info p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 16px;
+    width: 100%;
+    background-color: #19384A; /* Màu xanh đậm cho nav, giữ sự tối giản */
+    color: #fff;
+}
+
+.nav-left {
+    display: flex;
+    cursor: pointer;
+    width: 50%;
+}
+
+.nav-left ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #50ADBF; /* Màu xanh ngọc nhạt cho chữ nav, màu nhấn chính */
+}
+
+.nav-left ul li {
+    padding: 0 16px;
+}
+
+.nav-left ul li:hover {
+    color: #E76186; /* Màu hồng đậm cho hover, tạo điểm nhấn nhẹ nhàng */
+    transition: 0.3s;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.nav-right input {
+    border: none;
+    border-radius: 24px;
+    background-color: #fff; /* Màu trắng cho input search, giữ sự sạch sẽ */
+    padding: 15px 30px;
+    color: #19384A; /* Màu xanh đậm cho chữ, tương phản với nền trắng */
+    font-weight: 500;
+    width: 280px;
+}
+
+.nav-right input[type="text"] {
+    font-size: 14px;
+}
+
+.nav-right .fa-user {
+    margin: 0 0 0 32px;
+    cursor: pointer;
+    font-size: 26px;
+    color: #E76186; /* Màu hồng đậm cho icon người dùng, điểm nhấn nổi bật nhưng hạn chế */
+}
+
+.fa-magnifying-glass {
+    background-color: #50ADBF; /* Màu xanh ngọc nhạt cho nút search, màu nhấn chính */
+    border-radius: 24px;
+    color: #fff;
+    padding: 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.slide img {
+    width: 100%;
+    margin: 2.2em 0 0 0;
+    border-radius: 8px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin: 16px 0;
+    padding: 20px;
+    background-color: #fff; /* Màu trắng cho khu vực thẻ, tạo sự sạch sẽ */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.categories .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.categories .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.categories .card img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.categories .card h5 {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #50ADBF; /* Màu xanh ngọc nhạt cho tiêu đề thẻ, màu nhấn chính */
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+}
+
+.best-sellers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.best-sellers .item {
+    width: 100%;
+    background-color: #fff; /* Màu trắng cho khu vực nội dung */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+}
+
+.best-sellers .item .shape-item {
+    padding: 16px;
+}
+
+.best-sellers .item .shape-item img {
+    width: 100%;
+    padding: 20px 15px 15px;
+}
+
+.best-sellers .item .shape-item h2 {
+    color: #19384A; /* Màu xanh đậm cho tiêu đề, giữ sự tối giản */
+    height: 30px;
+    overflow: hidden;
+    line-height: initial;
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.best-sellers .item .shape-item .nav-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-sellers .item .shape-item .nav-item span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #E76186; /* Màu hồng đậm cho giá trị, điểm nhấn nổi bật nhưng hạn chế */
+}
+
+.best-sellers .item .shape-item .nav-item i {
+    font-size: 32px;
+    color: #50ADBF; /* Màu xanh ngọc nhạt cho icon, màu nhấn chính */
+    cursor: pointer;
+}
+
+.favorite-brands {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow p {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 0 0 6px;
+    color: #19384A; /* Màu xanh đậm cho chữ, giữ sự tối giản */
+}
+
+.follow p a {
+    color: #50ADBF; /* Màu xanh ngọc nhạt cho link, màu nhấn chính */
+}
+
+.inside-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.inside-view .ads {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 0;
+}
+
+.footer {
+    background-color: #19384A; /* Màu xanh đậm cho footer, giữ sự tối giản */
+    color: #fff;
+}
+
+.footer .nav-footer {
+    background-color: #19384A; /* Giữ màu nền footer */
+    text-align: left;
+}
+
+.footer .nav-footer table {
+    padding: 80px 0;
+    margin: 0 auto;
+    color: #50ADBF; /* Màu xanh ngọc nhạt cho chữ footer, màu nhấn chính */
+}
+
+.footer .nav-footer table tr th {
+    margin: 0 30px 13px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff; /* Màu tiêu đề footer trắng, tương phản với nền xanh đậm */
+    width: 27%;
+}
+
+.footer .nav-footer table tr td {
+    width: 27%;
+    margin: 0 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    height: 56px;
+    color: #50ADBF; /* Màu xanh ngọc nhạt */
+    cursor: pointer;
+}
+
+.footer .nav-footer table tr td:hover {
+    color: #E76186; /* Màu hồng đậm khi hover, điểm nhấn nhẹ nhàng */
+}
+
+.footer .nav-footer table tr td .social {
+    display: flex;
+    align-items: center;
+}
+
+.footer .nav-footer table tr td .social i {
+    padding-right: 10px;
+    font-size: 23px;
+    color: #E76186; /* Màu hồng đậm cho icon mạng xã hội, điểm nhấn hạn chế */
+} 
+
+.footer .nav-footer table tr td input {
+    width: 100%;
+    border-radius: 56px;
+    height: 56px;
+    border: 1px solid #50ADBF; /* Màu xanh ngọc nhạt cho viền input */
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #19384A; /* Màu xanh đậm cho chữ trong input */
+    background-color: #fff; /* Màu trắng cho input */
+    margin-bottom: 12px;
+}
+
+.footer .nav-footer table tr td button {
+    background: #50ADBF; /* Màu xanh ngọc nhạt cho nút đăng ký, màu nhấn chính */
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 100%;
+    height: 56px;
+    border-radius: 56px;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer .nav-footer table tr td button:hover {
+    background: #E76186; /* Màu hồng đậm khi hover, điểm nhấn nhẹ nhàng */
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 0 6.5em 0;
+    color: #50ADBF; /* Màu xanh ngọc nhạt cho copyright, màu nhấn chính */
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    color: #50ADBF; /* Màu xanh ngọc nhạt cho link, màu nhấn chính */
+}
+
+a:visited {
+    color: #19384A; /* Màu xanh đậm khi đã truy cập, giữ sự tối giản */
+}
+
+.support-page .slide-second {
+    padding: 10rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    background-color: #19384A; /* Màu xanh đậm cho trang hỗ trợ, giữ sự tối giản */
+    flex-wrap: wrap;
+}
+
+.support-page .slide-second .left {
+    width: 40%;
+}
+
+.support-page .slide-second .left h2 {
+    font-size: 2.5rem;
+    color: #50ADBF; /* Màu xanh ngọc nhạt cho tiêu đề, màu nhấn chính */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.support-page .slide-second .info-help {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #50ADBF; /* Màu xanh ngọc nhạt cho viền */
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    background-color: #fff; /* Màu trắng cho input, giữ sự sạch sẽ */
+    color: #19384A; /* Màu xanh đậm cho chữ, tương phản với nền trắng */
+}
+
+.support-page .slide-second .button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #50ADBF; /* Màu xanh ngọc nhạt cho nút, màu nhấn chính */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.support-page .slide-second .button:hover {
+    background-color: #E76186; /* Màu hồng đậm khi hover, điểm nhấn nhẹ nhàng */
+}
+
+.support-page .slide-second .right {
+    width: 50%;
+}
+
+.support-page .slide-second .right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 1500px) {
+    .best-sellers {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .best-sellers .item {
+       width: 60%;
+    }
+}
